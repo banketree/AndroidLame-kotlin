@@ -7,7 +7,7 @@
     android:paddingTop="15dp">
 
     <Button
-        android:id="@+id/record"
+        android:id="@+id/record_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -15,14 +15,14 @@
 
 
     <Button
-        android:id="@+id/encode"
+        android:id="@+id/encode_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="wav to mp3 encoding demo" />
 
     <Button
-        android:id="@+id/github"
+        android:id="@+id/github_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
