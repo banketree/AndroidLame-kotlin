@@ -1,9 +1,6 @@
 package com.banketree.lame_kotlin
 
 
-import android.media.AudioFormat
-import android.media.AudioRecord
-import android.media.MediaRecorder
 import android.os.Bundle
 import android.os.Environment
 import android.view.View
@@ -12,26 +9,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-import com.naman14.androidlame.AndroidLame
-import com.naman14.androidlame.LameBuilder
-
-import java.io.File
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.IOException
+import com.naman14.androidlame.Mp3AudioRecorder
+import com.naman14.androidlame.Mp3Player
 
 class Mp3AudioRecordActivity : AppCompatActivity() {
-
-    var minBuffer: Int = 0
-    var inSamplerate = 8000
-
-    var filePath = Environment.getExternalStorageDirectory().toString() + "/testrecord.mp3"
-
-    var isRecording = false
-
-    lateinit var audioRecord: AudioRecord
-    lateinit var androidLame: AndroidLame
-    lateinit var outputStream: FileOutputStream
+    val mp3AudioRecorder: Mp3AudioRecorder by lazy { Mp3AudioRecorder() }
+    val mp3Player: Mp3Player by lazy { Mp3Player() }
 
     lateinit var logFragment: LogFragment
     lateinit var statusText: TextView
@@ -49,14 +32,22 @@ class Mp3AudioRecordActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.log_container, logFragment).commit()
 
         start.setOnClickListener {
-            if (!isRecording) {
-                object : Thread() {
-                    override fun run() {
-                        isRecording = true
-                        startRecording()
-                    }
-                }.start()
+            if (!mp3AudioRecorder.isRecording) {
+                mp3AudioRecorder.start(Environment.getExternalStorageDirectory().toString() + "/1/test_${System.currentTimeMillis()}.mp3",
+                    object : Mp3AudioRecorder.IAudioRecordListener {
+                        override fun onStart() {
+                            addLog("start recording")
+                        }
 
+                        override fun onStop() {
+                            addLog("stop recording -> file:${mp3AudioRecorder.filePath}")
+                            mp3Player.start(mp3AudioRecorder.filePath!!)
+                        }
+
+                        override fun onAudioVolume(volume: Double) {
+                            addLog("recording -> volume:${volume}")
+                        }
+                    })
             } else
                 Toast.makeText(
                     this@Mp3AudioRecordActivity,
@@ -65,105 +56,14 @@ class Mp3AudioRecordActivity : AppCompatActivity() {
                 ).show()
         }
 
-        stop.setOnClickListener { isRecording = false }
-
+        stop.setOnClickListener {
+            mp3AudioRecorder.stop()
+        }
     }
 
-    private fun startRecording() {
-
-        minBuffer = AudioRecord.getMinBufferSize(
-            inSamplerate, AudioFormat.CHANNEL_IN_MONO,
-            AudioFormat.ENCODING_PCM_16BIT
-        )
-
-        addLog("Initialising audio recorder..")
-        audioRecord = AudioRecord(
-            MediaRecorder.AudioSource.MIC, inSamplerate,
-            AudioFormat.CHANNEL_IN_MONO,
-            AudioFormat.ENCODING_PCM_16BIT, minBuffer * 2
-        )
-
-        //5 seconds data
-        addLog("creating short buffer array")
-        val buffer = ShortArray(inSamplerate * 2 * 5)
-
-        // 'mp3buf' should be at least 7200 bytes long
-        // to hold all possible emitted data.
-        addLog("creating mp3 buffer")
-        val mp3buffer = ByteArray((7200 + buffer.size.toDouble() * 2.0 * 1.25).toInt())
-
-        try {
-            outputStream = FileOutputStream(File(filePath))
-        } catch (e: FileNotFoundException) {
-            e.printStackTrace()
-        }
-
-        addLog("Initialising Andorid Lame")
-        androidLame = LameBuilder()
-            .setInSampleRate(inSamplerate)
-            .setOutChannels(1)
-            .setOutBitrate(32)
-            .setOutSampleRate(inSamplerate)
-            .build()
-
-        addLog("started audio recording")
-        updateStatus("Recording...")
-        audioRecord.startRecording()
-
-        var bytesRead = 0
-
-        while (isRecording) {
-
-            addLog("reading to short array buffer, buffer sze- $minBuffer")
-            bytesRead = audioRecord.read(buffer, 0, minBuffer)
-            addLog("bytes read=$bytesRead")
-
-            if (bytesRead > 0) {
-
-                addLog("encoding bytes to mp3 buffer..")
-                val bytesEncoded = androidLame.encode(buffer, buffer, bytesRead, mp3buffer)
-                addLog("bytes encoded=$bytesEncoded")
-
-                if (bytesEncoded > 0) {
-                    try {
-                        addLog("writing mp3 buffer to outputstream with $bytesEncoded bytes")
-                        outputStream.write(mp3buffer, 0, bytesEncoded)
-                    } catch (e: IOException) {
-                        e.printStackTrace()
-                    }
-
-                }
-            }
-        }
-
-        addLog("stopped recording")
-        updateStatus("Recording stopped")
-
-        addLog("flushing final mp3buffer")
-        val outputMp3buf = androidLame.flush(mp3buffer)
-        addLog("flushed $outputMp3buf bytes")
-
-        if (outputMp3buf > 0) {
-            try {
-                addLog("writing final mp3buffer to outputstream")
-                outputStream.write(mp3buffer, 0, outputMp3buf)
-                addLog("closing output stream")
-                outputStream.close()
-                updateStatus("Output recording saved in $filePath")
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
-
-        }
-
-        addLog("releasing audio recorder")
-        audioRecord.stop()
-        audioRecord.release()
-
-        addLog("closing android lame")
-        androidLame.close()
-
-        isRecording = false
+    override fun onDestroy() {
+        super.onDestroy()
+        mp3AudioRecorder.stop()
     }
 
     private fun addLog(log: String) {

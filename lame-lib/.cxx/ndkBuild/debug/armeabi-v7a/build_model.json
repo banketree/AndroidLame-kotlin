@@ -5,7 +5,6 @@
       "sdkFolder": "G:\\Android_SDK",
       "isNativeCompilerSettingsCacheEnabled": false,
       "isBuildOnlyTargetAbiEnabled": true,
-      "ideBuildTargetAbi": "armeabi-v7a,armeabi",
       "splitsAbiFilterSet": [],
       "intermediatesFolder": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\build\\intermediates",
       "gradleModulePathName": ":lame-lib",
@@ -40,7 +39,10 @@
     "gradleBuildOutputFolder": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\.cxx\\cxx\\debug",
     "isDebuggableEnabled": true,
     "validAbiList": [
-      "ARMEABI_V7A"
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
     ],
     "buildTargetSet": []
   },
