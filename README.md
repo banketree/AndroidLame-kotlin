@@ -42,3 +42,9 @@ AndroidLame kotlin suport mp3 recorder and player
         
         
 ![Image text](https://github.com/banketree/AndroidLame-kotlin/blob/master/screenShot/1.jpg)        
+
+
+
+
+感谢开源：
+https:github.com/naman14/TAndroidLame
