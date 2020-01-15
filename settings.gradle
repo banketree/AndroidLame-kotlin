@@ -1,2 +1,2 @@
-include ':app', ':lame-lib', ':mp3manager'
+include ':app', ':android-lame'
 rootProject.name='AndroidLame-kotlin'

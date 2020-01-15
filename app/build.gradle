@@ -45,5 +45,5 @@ dependencies {
     implementation dependence['core-ktx']
     implementation dependence['constraintlayout']
     implementation dependence['material']
-    implementation project(path: ':lame-lib')
+    implementation project(path: ':android-lame')
 }
