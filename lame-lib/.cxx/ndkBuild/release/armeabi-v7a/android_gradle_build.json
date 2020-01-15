@@ -1,0 +1,113 @@
+{
+  "buildFiles": [
+    "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\Android.mk"
+  ],
+  "cleanCommands": [
+    "G:\\Android_SDK\\ndk\\20.1.5948944\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dH:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dH:/Project/AndroidLame-kotlin/lame-lib/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dH:\\Project\\AndroidLame-kotlin\\lame-lib\\build\\intermediates\\ndkBuild\\release\\lib clean"
+  ],
+  "buildTargetsCommand": "G:\\Android_SDK\\ndk\\20.1.5948944\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dH:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dH:/Project/AndroidLame-kotlin/lame-lib/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dH:\\Project\\AndroidLame-kotlin\\lame-lib\\build\\intermediates\\ndkBuild\\release\\lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "androidlame-release-armeabi-v7a": {
+      "buildCommand": "G:\\Android_SDK\\ndk\\20.1.5948944\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dH:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dH:/Project/AndroidLame-kotlin/lame-lib/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dH:\\Project\\AndroidLame-kotlin\\lame-lib\\build\\intermediates\\ndkBuild\\release\\lib H:/Project/AndroidLame-kotlin/lame-lib/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libandroidlame.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "androidlame",
+      "files": [
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\VbrTag.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\bitstream.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\encoder.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\fft.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\gain_analysis.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\id3tag.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\lame.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\mpglib_interface.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\newmdct.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\presets.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\psymodel.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\quantize.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\quantize_pvt.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\reservoir.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\set_get.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\tables.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\takehiro.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\util.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\vbrquantize.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\.\\libmp3lame\\version.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        },
+        {
+          "src": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\src\\main\\jni\\AndroidLame.c",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot G:/Android_SDK/ndk/20.1.5948944/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fpic -march\u003darmv7-a -mthumb -Oz -DNDEBUG -IH:/Project/AndroidLame-kotlin/lame-lib/src/main/jni -DANDROID -DSTDC_HEADERS -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        }
+      ],
+      "output": "H:\\Project\\AndroidLame-kotlin\\lame-lib\\build\\intermediates\\ndkBuild\\release\\obj\\local\\armeabi-v7a\\libandroidlame.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cCompilerExecutable": "G:\\Android_SDK\\ndk\\20.1.5948944\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}
