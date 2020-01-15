@@ -57,6 +57,15 @@ class Mp3Player {
         return mediaPlayer!!.duration
     }
 
+    fun isPlaying(): Boolean {
+        if (mediaPlayer == null) return false
+        return mediaPlayer!!.isPlaying
+    }
+
+    fun getPlayer(): MediaPlayer? {
+        return mediaPlayer
+    }
+
     private fun isMainThread(): Boolean {
         return Looper.getMainLooper().thread === Thread.currentThread()
     }
