@@ -11,21 +11,14 @@ class Mp3Player {
         MediaPlayer()
     }
 
-    fun start(_filePath: String) {
-        if (TextUtils.isEmpty(_filePath)) return //路径异常
-        Thread(Runnable {
-            try {
-                startPlayByThread(_filePath)
-            } catch (ex: Exception) {
-                Log.e("Mp3Player", "Exception:${ex.message}")
-            }
-
-        }).start()
+    fun start(_filePath: String): MediaPlayer? {
+        if (TextUtils.isEmpty(_filePath)) return null //路径异常
+        return startPlayByThread(_filePath)
     }
 
     @Throws(Exception::class)
-    private fun startPlayByThread(filePath: String) {
-        if (isMainThread()) return
+    private fun startPlayByThread(filePath: String): MediaPlayer? {
+        if (isMainThread()) return null
         mediaPlayer.stop()
         mediaPlayer.reset()
 
@@ -34,6 +27,7 @@ class Mp3Player {
         // 音乐文件准备
         mediaPlayer.prepare()
         mediaPlayer.start()
+        return mediaPlayer
     }
 
     fun stop() {
@@ -45,7 +39,7 @@ class Mp3Player {
         mediaPlayer.pause()
     }
 
-    fun resume(){
+    fun resume() {
         mediaPlayer.start()
     }
 
